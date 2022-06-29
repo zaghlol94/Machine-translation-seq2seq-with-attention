@@ -35,7 +35,7 @@ enc = Encoder(INPUT_DIM, config["ENC_EMB_DIM"], config["ENC_HID_DIM"], config["D
 dec = Decoder(OUTPUT_DIM, config["DEC_EMB_DIM"], config["ENC_HID_DIM"], config["DEC_HID_DIM"], config["DEC_DROPOUT"], attn)
 
 model = Seq2Seq(enc, dec, device).to(device)
-
+model.load_state_dict(torch.load(config["test_config"]["model_path"]))
 test_loss = evaluate(model, test_loader, criterion, device)
 
 print(f'| Test Loss: {test_loss:.3f} | Test PPL: {math.exp(test_loss):7.3f} |')
