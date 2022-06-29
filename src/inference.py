@@ -35,6 +35,6 @@ model.load_state_dict(torch.load(config["test_config"]["model_path"]))
 translation, attention = translate_sentence(
         model, args.sentence, src_vocab, trg_vocab, src_tokenizer, device, max_length=50
     )
-print(" ".translation[:-1])
+print(" ".join(translation[:-1]))
 display_attention(args.sentence.split(" "), translation, attention)
 
