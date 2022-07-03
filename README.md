@@ -1,5 +1,5 @@
 # Machine-translation-seq2seq-with-attention
-This rebo is a pytorch implementation of [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) on [Multi30k](https://metatext.io/datasets/multi30k) dataset using De->En pair language, 
+This repo is a pytorch implementation of [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) on [Multi30k](https://metatext.io/datasets/multi30k) dataset using De->En pair language, 
 the algorithm achieved 25.6 Belu-score.
 
 # Setup And Inference
